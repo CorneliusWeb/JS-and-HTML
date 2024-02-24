@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strictly Javascript</title>
+</head>
+<body>
+    <button type="button" onclick="document.getElementById('web').src='images/webdev.jpg'">Codeverse</button>
+   <img id="web" src="images/webdev.jpg" type="image/jpg" alt="coding interface" style="width: 612px; height: 408px;">
+   <button type="button" onclick="document.getElementById('web').src='images/webdev1.jpg'">Techverse</button>
+   
+   <p id="fsize">Changing text font-size with js. This will be fun!</p>
+   <script>
+    document.getElementById('fsize').style.fontSize = '30px';
+   </script>
+
+   <p id="hide">Javascript can hide a text in HTML. This paragraph will be hidden.</p>
+   <script>
+    document.getElementById('hide').style.display = 'none';
+   </script>
+
+   <p id="show" style="display: none;">Javascript can be used to display a hidden text on a web page. This paragraph should be hidden following the display:none CSS value in the p element. But thanks to JS, we can see it now.</p>
+   <script>
+    document.getElementById('show').style.display = 'block';
+   </script>
+
+   <p id="hide_show">Using a button to show and hide a text in HTML by the power of Javascript. This should be fun like always guys. Leggo!!</p>
+   <button type="button" onclick="document.getElementById('hide_show').style.display = 'none'">Hide Text</button>
+   <button type="button" onclick="document.getElementById('hide_show').style.display = 'block'">Show Text</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
