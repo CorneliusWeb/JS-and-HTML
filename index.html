@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strictly Javascript</title>
-    <link rel="stylesheet" type="style/css" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <button type="button" onclick="document.getElementById('web').src='images/webdev.jpg'">Codeverse</button>
-   <img id="web" src="images/webdev.jpg" type="image/jpg" alt="coding interface" style="width: 612px; height: 408px;">
+   <img id="web" src="images/webdev.jpg" type="image/jpg" alt="coding interface" style="width: 512px; height: 308px;">
    <button type="button" onclick="document.getElementById('web').src='images/webdev1.jpg'">Techverse</button>
    
    <p id="fsize">Changing text font-size with js. This will be fun!</p>
@@ -26,9 +26,44 @@
     document.getElementById('show').style.display = 'block';
    </script>
 
-   <p id="hide_show">Using a button to show and hide a text in HTML by the power of Javascript. This should be fun like always guys. Leggo!!</p>
-   <button type="button" onclick="document.getElementById('hide_show').style.display = 'none'">Hide Text</button>
-   <button type="button" onclick="document.getElementById('hide_show').style.display = 'block'">Show Text</button>
+   <p id="hideShow">Using a button to show and hide a text in HTML by the power of Javascript. This should be fun like always guys. Leggo!!</p>
+   <button type="button" onclick="document.getElementById('hideShow').style.display = 'none'">Hide Text</button>
+   <button type="button" onclick="document.getElementById('hideShow').style.display = 'block'">Show Text</button>
+
+   <p>Javascript can be used to create a print option that will make the entire webpage printable. Let's check it out!!</p>
+   <button type="button" onclick="window.print()">Print</button>
+
+   <P>Creating a switch to turn on light bulb or turn it off using Javascript.</P>
+   <button type="button" onclick="document.getElementById('onOff').src='images/pic_bulboff.webp'">Turn Off</button>
+   <img src="images/pic_bulboff.webp" type="image/webp" alt="bulb off" id="onOff" style="width: 116px; height: 249px" loading="lazy">
+   <!--loaddin:lazy attribute makes an image load only when a user scrolls down to it.-->
+   <!--loading:eager attribute makes an image to load with the page.-->
+   <button type="button" onclick="document.getElementById('onOff').src='images/pic_bulbon.webp'">Turn On</button>
+
+   <h3>Variables</h3>
+   <p>Always declare variables in Javascript</p>
+   <p id="test"></p>
+   <p id="test1"></p>
+   <p id="test3"></p>
+
+   <script>
+    let carName, carModel;
+    carName = 'Mercedes Benz';
+    carModel = 'GLE';
+    document.getElementById('test').innerHTML = carModel;
+    //the 'let' js keyword above declared the variables, carName and carModel.
+    
+    //multiple variables can be declared on a single line (separate with semicolon).
+    let carName1 = 'Volvo', carModel1 = 'Santra';
+    document.getElementById('test1').innerHTML = carName1;
+
+    //another way to declare variables is to span it across multiple lines.
+    let 
+    carName2 = 'BMW',
+    carModel2 = 'Beast 209';
+    document.getElementById('test3').innerHTML = carModel2; 
+    //but it is a good practice to first declare variables before assigning values to them.
+   </script>
 
 
 
