@@ -44,7 +44,11 @@
    <p>Always declare variables in Javascript</p>
    <p id="test"></p>
    <p id="test1"></p>
-   <p id="test3"></p>
+   <p id="test2"></p>
+   <p id="test3">The supposed test3 element to be replaced by the value of 'userName'</p> 
+   <p id="test4"></p> 
+   <p id="test5"></p>
+   
 
    <script>
     let carName, carModel;
@@ -61,13 +65,90 @@
     let 
     carName2 = 'BMW',
     carModel2 = 'Beast 209';
-    document.getElementById('test3').innerHTML = carModel2; 
+    document.getElementById('test2').innerHTML = carModel2; 
     //but it is a good practice to first declare variables before assigning values to them.
    </script>
 
+   <h3>let Keyword</h3>
+   <p>Variables declared with let have a block scope. This means that they cannot be redeclared.</p>
 
+   <script>
+    let userName = 'Asogwa';
+    //let userName = 'Nwokolo';
+    
+    //this is not allowed in JS. Redeclaring a variable is reserved only for the var keyword.
+    document.getElementById('test3').innerHTML = userName;
+    //the following code didn't print anything at all.
+   </script>
 
+   <script>
+    let userName1 = 'Ugwu';
+    {
+        let userName1 = 'Odo';
+    }
 
+    {
+        let userName1 = 'Onah' //redeclaring variables in different blocks is allowed.
+    }
+    document.getElementById('test4').innerHTML = userName1;
+    //block scope effect. the let declared inside the block is inaccessible from the outside.
+   </script>
+
+   <script>
+    var lastName = 'Chidera';
+    var lastName = 'Chiamaka';
+    document.getElementById('test5').innerHTML = lastName;
+    //var is the only keyword allowed to redeclare variables in JS.
+   </script>
+
+   <h3>const Keyword</h3>
+   <p>const is like the 'straight to the point' keyword in Javascript. When const declare a variable, value shold be assigned to the variable immediately.</p>
+   <p id="test6"></p>
+   <p id="test7"></p>
+   <p id="test10"></p>
+
+   <script>
+    const surname = 'Ohagwu';
+    document.getElementById('test6').innerHTML = surname;
+    {
+        const
+        surname = 'Eze';
+        document.getElementById('test7').innerHTML = surname;
+        //as a block scope keyword, variable declared inside a block cannot be accessed from outside the block.
+    }
+   </script>
+
+   <script>
+    const surname1 = 'Agbo';
+    const surname2 = 'Ali';
+    //declaring multiple variables with const requires a fresh declaration with the const keyword everytime.
+   </script>
+
+   <p>The const keyword is used in declaring new array, object, function, RegEx. <br>
+    <strong>const Array []</strong></p>
+   <p id="test8"></p>
+   <script>
+    const countries = ['NG', 'US', 'UK', 'GH'];
+    //to change or replace an element call the variable and use numbers starting from 0 to select the element to be changed
+    countries[3] = 'SN'; //this will replace GH with SN in the array.
+    //to add an element(another country) to the list, use variable.push('');
+    countries.push('AU.');
+    const spacedCountries = countries.join(', '); //spaces and adds comma to the array elements
+
+    document.getElementById('test8').innerHTML = spacedCountries;
+   </script>
+
+   <p><strong>const Object</strong></p>
+   <p id="test9"></p>
+
+   <script>
+    const cars = {type:'BMW', model:'Z904', price:'$400,876'};
+    //to change element of an object, call variable.object
+    cars.type = 'Benz';
+    //to add an element variable.object = value
+    cars.owner = 'JAMMY';
+    document.getElementById('test9').innerHTML = 'Car owner is ' + cars.owner + ' ' + cars.type + ' ' + cars.model;
+   </script>
 
 
 
