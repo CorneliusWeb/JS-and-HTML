@@ -75,8 +75,8 @@
    <script>
     let userName = 'Asogwa';
     //let userName = 'Nwokolo';
-    
     //this is not allowed in JS. Redeclaring a variable is reserved only for the var keyword.
+    
     document.getElementById('test3').innerHTML = userName;
     //the following code didn't print anything at all.
    </script>
@@ -125,7 +125,7 @@
    </script>
 
    <p>The const keyword is used in declaring new array, object, function, RegEx. <br>
-    <strong>const Array []</strong></p>
+    <strong>const Array [ ]</strong></p>
    <p id="test8"></p>
    <script>
     const countries = ['NG', 'US', 'UK', 'GH'];
@@ -138,7 +138,7 @@
     document.getElementById('test8').innerHTML = spacedCountries;
    </script>
 
-   <p><strong>const Object</strong></p>
+   <p><strong>const Object { }</strong></p>
    <p id="test9"></p>
 
    <script>
@@ -150,13 +150,21 @@
     document.getElementById('test9').innerHTML = 'Car owner is ' + cars.owner + ' ' + cars.type + ' ' + cars.model;
    </script>
 
+   <label for="srch">Search Page:</label>
+   <input type="search" name="searchPage" id="srch" onfocus="searchPage()">
+   <button type="button">Search</button>
+   <br><br>
+
+   <label for="fname">First Name:</label>
+   <input type="text" id="fname" name="firstName">
+   <input type="submit" value="Submit">
 
 
 
 
 
 
-
+<script src="DOM.js"></script>
 
 </body>
 </html>
