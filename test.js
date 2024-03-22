@@ -53,3 +53,9 @@ console.log(a && b);
     console.log(a)
 }
 
+function getReadInfo() {
+    let read = 'what\s up today!';
+    return read;
+    
+}
+console.log(getReadInfo);
