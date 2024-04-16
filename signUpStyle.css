@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.asteriks {
+    color: red;
+}
+#page {
+    width: 500px;
+    margin: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 15px;
+    border: none;
+}
+h1 {
+    margin: 15px;
+    font-weight: normal;
+}
+
+#name-container {
+    margin: 20px 0px;
+    display: flex;
+    flex-wrap: hidden;
+    justify-content: space-between;
+}
+input[type="text"]:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+input[type="text"]:focus {
+    border-color: rgba(0, 102, 255, 0.850);
+    border-width: 2px;
+}
+input[type="text"] {
+    padding: 17px 7px;
+    font-size: 14px;
+    margin-top: 5px;
+    width: 225px;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid grey;
+}
+
+#userInfo-container {
+    margin: 20px 0px;
+}
+input[type="email"]:hover {
+     background-color: rgba(0, 0, 0, 0.04);
+}
+input[type="email"]:focus {
+    border-color: rgba(0, 102, 255, 0.850);
+    border-width: 2px;
+}
+input[type="email"] {
+    padding: 17px 7px;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid grey;
+}
+
+#password-container {
+    margin: 12px 0px;
+    width: 100%;
+}
+input[type="password"]:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+input[type="password"]:focus {
+    border-color: rgba(0, 102, 255, 0.850);
+    border-width: 2px;
+}
+input[type="password"] {
+    padding: 17px 7px;
+    font-size: 15px;
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid grey;
+    border-radius: 7px;
+    outline: none;
+}
+.password {
+    margin-bottom: 15px;
+}
+#password-strength {
+    font-size: 13px;
+}
+
+.error-message {
+    font-size: 13px;
+    color: red;
+    display: none;
+}
+
+button {
+    margin: 12px;
+    padding: 15px;
+    width: 100%;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: rgba(0, 102, 255, 0.850);
+    color: whitesmoke;
+    font-size: 17px;
+    border: none;
+}
+button:hover {
+    background-color: rgba(0, 68, 255, 0.904);
+}
+
+.checkbox {
+    width: 17px;
+    height: 17px;
+    margin: 10px;
+    float: left;
+    cursor: pointer;
+}
+.checkbox-text {
+    font-size: 12px;
+}
+
+.biz-account {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 7px;
+}
+.biz-account a {
+    text-decoration: none;
+}

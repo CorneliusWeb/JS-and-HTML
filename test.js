@@ -58,4 +58,3 @@ function getReadInfo() {
     return read;
     
 }
-console.log(getReadInfo);

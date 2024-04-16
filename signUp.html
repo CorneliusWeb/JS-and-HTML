@@ -1,32 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coinbase Signup Page Sample</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Coinbase Signup Page Sample</title>
+		<link rel="stylesheet" href="signUpStyle.css">
 </head>
 <body>
-    <p id="signUp"></p>
-    <div class="full_body">
-        <h1 class="header">Create an account</h1>
-        <p>Be sure to enter your legal name as it appears on your government-issued ID.</p>
-        <p>Required field has an asteriks: *</p>
+		<p id="signUp"></p>
+		<div id="page" class="media-page">
+				<h1 class="header">Create an account</h1>
+				<p>Be sure to enter your legal name as it appears on your government-issued ID.</p><br>
+				<p>Required fields have an asterisk: <span class="asteriks">*</span></p>
 
-        <form action="">
-            <label for="fname">Legal first name*</label><br>
-            <input type="text" id="fname" name="fname" placeholder="Legal first name" required><br>
-            <label for="lname">Legal last name*</label><br>
-            <input type="text" id="lname" name="lname" placeholder="Legal last name" required><br>
+				<form onsubmit="return validatePassword()">
 
-            <label for="newMail">Email*</label><br>
-            <input type="email" id="newMail" name="newMail" placeholder="Email here" required><br>
-            <label for="password">Password*</label><br>
-            <input type="password" id="password" name="password" placeholder="Minimum 8 characters" required><br>
-            <input type="checkbox">I certify that I am 18 years of age or older, I agree to the User Agreement, and I have read the Privacy Policy. <br>
+					<div id="name-container" class="media-name-container">
+						<div id="fname">
+							<label for="fname">Legal first name<span class="asteriks">*</span></label><br>
+							<input type="text" id="fname" class="fName" name="fname" placeholder="Legal first name" required>
+						</div>
+						<div id="lname" class="lName">
+							<label for="lname">Legal last name<span class="asteriks">*</span></label><br>
+							<input type="text" id="lname" name="lname" placeholder="Legal last name" required>
+						</div>
+					</div>  
 
-            <input type="submit" value="Create free account">
-        </form>
-        <p><a href="#biz_account">Sign up</a> for a business account</p>
-    </div>
+					<div id="userInfo-container">
+						<div id="email">
+							<label for="newMail">Email<span class="asteriks">*</span></label><br>
+							<input type="email" id="newMail" name="newMail" placeholder="Enter your email" required>
+						</div>
+						
+						<div id="password-container">
+							<div class="password">
+								<label for="password">Password<span class="asteriks">*</span></label><br>
+								<input type="password" id="password" name="password" placeholder="Minimum 8 characters" oninput="validatePassword()" required>
+								<div id="password-strength"></div>
+							</div>
+
+							<div class="confirm-password-container">
+								<label for="confirm-password">Confirm password<span class="asteriks">*</span></label><br>
+								<input type="password" id="confirm-password" name="confirm-password" placeholder="Enter password again" oninput="validatePassword()" required>
+							</div>
+							<div class="error-message" id="error-message">Password do not match!</div>
+							</div>
+						</div>
+						<input type="checkbox" class="checkbox">
+						<p class="checkbox-text">I certify that I am 18 years of age or older, I agree to the User Agreement, and I have read the Privacy Policy.</p><br>
+
+						<button type="submit">Create free account</button>
+				</form>
+				<p class="biz-account"><a href="#biz_account">Sign up</a> as a business</p>
+		</div>
+		<script src="signUpApp.js"></script>
 </body>
 </html>
